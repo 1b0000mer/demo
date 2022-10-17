@@ -2,7 +2,7 @@
   "Post": {
     "userId": { "int": { "min": 1, "max": 10 } },
     "id": { "int": { "min": 1, "max": 100 } },
-    "title": { "string": {} },
-    "body": { "loremWords": { "minLength": 100, "maxLength": 300 } }
+    "title": { "regexp": "[A-Z][a-z]{5,10}" },
+    "body": { "loremParagraphs": { "minLength": 100, "maxLength": 300 } }
   }
 }

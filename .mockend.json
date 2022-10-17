@@ -1,7 +1,14 @@
 {
   "Post": {
-    "userId": {"int": {} },
-    "id": {"int": {}},
-    "title": {"string": {}},
-    "body": {"lorem*": {}}
+    "title": { "string": {} },
+    "comments": {
+      "hasMany": "Comment"
+    }
+  },
+  "Comment": {
+    "body": { "string": {} },
+    "post": {
+      "belongsTo": "Post"
+    }
+  }
 }
